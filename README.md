@@ -1,4 +1,4 @@
-# 前端任务
+﻿# 任务描述
 1. 请仅仅使用用html标签编写个人简历网页，简历中不包含任何CSS和JS
 
 2. 请使用nodejs开发一个名为google的nodejs模块，使用google可以在Terminal中输入
