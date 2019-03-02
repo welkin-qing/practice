@@ -8,5 +8,5 @@ google "如何开发一个nodejs模块"
 ## resume
 - 个人简历
 
-## goole
+## google
 - 模块开发
