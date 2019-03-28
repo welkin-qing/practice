@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    /* #box{
+        background-color: darkcyan;
+        width: 100px;
+        height: 100px;
+        
+    } */
+    #container{display: flex;width: 320px;
+    height: 300px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid gray;
+    align-items: flex-end;/*子元素底部对齐*/
+    justify-content: space-around;  /*所有剩下的空间均匀分配*/
+    }
+    .box{width: 40px;}
+    .box:nth-of-type(1){background-color: #f00;height: 30%;}
+    .box:nth-of-type(2){background-color: #ddd;height: 80%;}
+    .box:nth-of-type(3){background-color: #0fd;height: 70%;}
+    .box:nth-of-type(4){background-color: #ff0;height: 60%;}
+    .box:nth-of-type(5){background-color: #234;height: 90%;}
+    </style>
+</head>
+<body style="margin:0;padding:0">
+<!--使用子绝父相 
+    <div style="height:100px;width:200px;position:relative;border-left: 1px solid #000;">
+    <div style="height:30%;width:10px;background-color:#f00;position:absolute;top:70%;left:10px;"></div>
+    <div style="height:80%;width:10px;background-color:#ddd;position:absolute;top:20%;left:30px;"></div>
+    <div style="height:70%;width:10px;background-color:#0fd;position:absolute;top:30%;left:50px;"></div>
+    <div style="height:60%;width:10px;background-color:#ff0;position:absolute;top:40%;left:70px;"></div>
+    <div style="height:90%;width:10px;background-color:#234;position:absolute;top:10%;left:100px;"></div>
+</div> -->
+    <div id="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <script>
+        // var object = {
+        //     b: { c: 4 }, d: [{ e: 5 }, { e: 6 }]
+        // };
+        // console.log(parse(object, 'b.c') == 4) //true
+        // console.log(parse(object, 'd[0].e') == 5) //true
+        // console.log(parse(object, 'd.0.e') == 5) //true
+        // console.log(parse(object, 'd[1].e') == 6) //true
+        // console.log(parse(object, 'd.1.e') == 6) //true
+        // console.log(parse(object, 'f') == 'undefined') //true
+
+        // function parse(obj, str){
+        //    // str.replace('[','.').replace(']','.').split('.').map ((ele) => obj = obj[ele.trim()]);
+        //    str.replace('[', '.').replace(']', '').split('.').map((ele) => obj = obj[ele.trim()]); 
+        //    return obj || 'undefined'
+        // }
+        // function f1(a,b){
+        //     let i=1;
+        //     let flag = -1;
+        //     let j= 1
+        //     let sum = 0;
+        //     while(i<=a){
+        //         if(j<=b){
+        //             sum = sum + flag*i
+        //             i++;
+        //             j++;
+        //         }else{
+        //             j = 1;
+        //             flag = -flag;
+        //         }
+        //     }
+        //     console.log(sum)
+        // }
+        // //f1(12,3);
+        // var a = prompt('a')
+        // var b = prompt('b')
+        //使用XHRd对象
+        // function createXHR(){
+        //     if(typeof XMLHttpRequest != "undefined"){
+        //         return new XMLHttpRequest(); //对原生XHR对象的支持
+        //     }else if(typeof ActiveXObject != "undefined"){
+        //         if(typeof arguments.callee.activeXString != "string"){  
+        //             //callee 是 arguments 对象的一个属性。它可以用于引用该函数的函数体内当前正在执行的函数
+        //             var versions = ["MSXML2.XMLHttp.6.0", "MSXML2.XMLHttp.3.0","MSXML2.XMLHttp"],
+        //                 i,len;
+        //             for(i=0, len=versions.length; i<len; i++){
+        //                 try{
+        //                     new ActiveXObject(versions[i]);
+        //                     arguments.callee,activeXString = versions[i];
+        //                     break;
+        //                 }catch(ex){
+        //                     //跳过
+        //                 }
+        //             }
+        //         }
+        //         return new ActiveXObject(arguments.callee.activeXString)
+        //     }else{
+        //         throw new Error("No XHR object available")
+        //     }
+        // }
+        // var xhr = new createXHR();
+
+
+        // xhr.open("get", "example.php", false)
+        // xhr.send(null)
+        // if((xhr.status>=200 && xhr.status<300) || xhr.status == 304){
+        //     alert(xhr.responseText);
+        // }else{
+        //     alert("Request was unsuccessful:"+ xhr.status)
+        // }
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex弹性布局</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            word-wrap: break-word;
+        }
+    
+        header {
+            background-color: darkcyan;
+            height: 50px;
+            flex: 1;
+        }
+    
+        .container {
+            background-color: cyan;
+            flex:1;/*1.设置flex属性*/
+        }
+    
+        .middle,
+        .left,
+        .right {
+            height: 500px;
+            word-wrap: break-word;
+            /*解决文字换行*/
+        }
+    
+        .middle {
+            background-color: palevioletred;
+            flex: 1;
+        }
+    
+        .left {
+            order: -1; /*2.设置布局，定义项目的排列顺序，越小越靠前，默认为0*/
+            flex:0 0 12em;
+        }
+    
+        .right {
+            background-color: purple;
+            flex:0 0 12em
+        }
+    
+        footer {
+            background-color: yellowgreen;
+            height: 60px;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h4>header</h4>
+    </header>
+    <div class="container">
+        <div class="middle">
+            <h4>middle</h4>
+            <p>mmmmmmmmmmmmmmm</p>
+        </div>
+        <div class="left">
+            <h4>left</h4>
+            <p>lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll</p>
+        </div>
+        <div class="right">
+            <h4>right</h4>
+            <p>rrrrrrrrrrrrrrrrrrrr</p>
+        </div>
+    </div>
+    <footer>
+        <h4>footer</h4>
+        <p>pppppppppppppppppp</p>
+    </footer>
+</body>
+</html>

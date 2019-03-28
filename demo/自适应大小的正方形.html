@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{padding: 0;margin: 0;}
+    /* .app{width: 100px;height: 100px;border: 5px solid greenyellow;} */
+    /* 1.  .box{
+        width: 100%;
+        height: 100vw;
+        background-color:darkcyan;
+        border: 1px solid black;
+    } */
+    /* .box{
+        height: 0;
+        width: 100%;
+        padding-bottom: 100%;
+        background-color:darkcyan;
+        border: 1px solid black;
+    } */
+    .box{
+        background-color:darkcyan;
+        border: 1px solid black;   
+        width: 100%;
+    }
+    .box:after{
+        content: '';
+        display: block;
+        margin-top: 100%; /* margin 百分比相对父元素宽度计算 */
+    }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <div class="box">99999999999999999999999999999999</div>
+    </div>
+</body>
+</html>

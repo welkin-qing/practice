@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{padding: 0;margin: 0;}
+    .box{
+        border: 5px solid yellowgreen;/*1.display: inline-block;*/
+        /*2.overflow: hidden;*/
+    }
+    .box:after{
+        content: ".";
+        display: block;
+        clear: both;
+        height: 0;
+       overflow: hidden;
+    }
+    .box1,.box2{width: 100px;height: 100px;background-color: darkcyan; border: 1px solid black;float: left;}
+    
+    /*.box3{height: 200px;width: 200px;background-color: red;border: 1px solid greenyellow}*/
+    .box3{height: 0;clear: both;}/*3.*/
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <!-- <div class="box3"></div> -->
+    </div>
+    <script>
+        // function out() {
+        //     var num = 1;
+        //    return function  (n){
+        //         return (n + num)
+        //     }
+        // }
+        // var a = out()
+        // console.log(a(1))
+        // console.log(out()(2))
+
+        // var name="welkin"
+        // var obj = {
+        //     name : "zhangsan",
+        //     getName: function(){
+        //         var that = this;
+        //         return function(){
+        //             return that.name
+        //         }
+        //     }
+        // }
+        // console.log(obj.getName()()) //zhangsan
+
+    // function creatP(name, age) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.sayName = function () {
+    //         alert(this.name)
+    //     }
+    // }
+    // var p1 = creatP('zhangdan', 86)
+    // var p2 = creatP('welkin', 18)
+    var a= [1,2,3]
+    //var par = /(.)hort/g
+    console.log(typeof([]))  //object
+    console.log(Array.isArray([]))  //true
+    console.log([] instanceof Array)  //true
+    console.log(Object.prototype.toString.call([]))  //[object Array]
+    </script>
+</body>
+</html>

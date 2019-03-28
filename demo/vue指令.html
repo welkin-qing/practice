@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .box{
+        background-color: darkcyan;
+    }
+    [v-cloak] {
+  display: none;
+}
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{ message }}
+        <p v-text="message"></p>
+        <div :class="{box:message}" style="width:100px;height:100px;border:1px solid black"></div>
+        <!-- <p v-html="htmlmessage"></p> -->
+        <!-- <button :click="todoThis">button</button> -->
+        <input v-model="message" type="text">
+        <span v-pre>{{hhhhhhhhhhhhh}}</span>
+        <div v-cloak>
+            {{message}}
+        </div>
+        <span v-once>{{message}}</span>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 0,
+                htmlmessage: '<div style="width:100px;height:100px;border:1px solid black"></div>'
+            },
+            methods: {
+                todoThis(){
+                    alert('hello')
+                }
+            },
+        })
+    </script>
+</body>
+</html>

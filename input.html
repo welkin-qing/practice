@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .search {
+        height: 35px;
+        border: 1px solid black;
+        position: relative;
+        text-align: center;
+        background-color: pink;
+    }
+    .search_input{margin-right: 110px;}
+    .search_input>input{
+        width: 100%;
+        display: inline-block;
+        height: 30px;
+    }
+    .search_btn>button{
+        width: 100px;
+        height: 32px;
+        background-color: darkcyan;
+        position: absolute;
+        right: 5px;
+        top:4px;
+    }
+    </style>
+</head>
+<body>
+    <div class="search">
+        <div class="search_input">
+            <input type="text" name="">
+        </div>
+        <div class="search_btn">
+            <button></button>
+        </div>
+    </div>
+</body>
+<script>
+    //1
+//     function a(){
+//     var user = "555";
+//     console.log(this.user); //undefined
+//     console.log(this); //Window
+// }
+// a(); //相当于window.a();
+// //this最终指向的是调用它的对象，这里的函数a实际是被Window对象所点出来的
+
+//2
+// var o = {
+//     user:"追梦子",
+//     fn:function(){
+//         console.log(this.user); //追梦子
+//         console.log(this); //{user: "追梦子", fn: ƒ}
+//     }
+// }
+// o.fn();
+
+//3
+// var o = {
+//     a:10,
+//     b:{
+//        // a:12,
+//         fn5:function(){
+//             //console.log(this.a); //undefind  有两个对象b和o,所以此this.a指向它的上一级
+//            // console.log(this)
+//         }
+//     },
+//     fn1:function(){
+//         console.log(this.a);  //10 
+//         console.log(this)
+//     }
+// }
+// o.fn1();
+// o.fn5();
+
+//4
+// function fn()  
+// {  
+//     this.user = '追梦子';  
+//     return 
+// }
+// var a = new fn;  
+// console.log(a.user); //追梦子
+
+//5 
+//构造函数版this
+//    var a= {
+//        user: "追梦子",
+//        Fn: function() {
+//            // this.user = "追梦子";
+//            console.log(this.user);
+//         }
+//     }
+// //var a = new Fn();
+// //console.log(a.user); //追梦子
+// //console.log(Fn.user);
+// a.Fn()
+
+// var a = {
+//     user:"追梦子",
+//     fn:function(){
+//         console.log(this.user);
+//     }
+// }
+// var b = a.fn;
+// var c = b.bind(a);
+// console.log(c); //f() { console.log(this.user); }
+// c();  //追梦子
+// a.fn()
+
+
+var name = 123;
+var a = {
+    name: 345,
+    sayName: function () {
+        console.log(this.name)
+    }
+}
+var b = {
+    name: 789
+}
+var sayName = a.sayName;  //只是将这个函数赋给新变量 sayname
+a.sayName();//345
+sayName();  //123  调用这个函数时，this指向window
+a.sayName.call(b)  //789
+</script>
+</html>
