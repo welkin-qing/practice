@@ -1,0 +1,57 @@
+、闭包：下面这个 ul，如何点击每一列的时候 alert 其 index？
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="test">
+    <li>这是第一条</li>
+    <li>这是第二条</li>
+    <li>这是第三条</li>
+  </ul>
+  <script>
+  //非闭包实现 
+  var lis = document.querySelectorAll('li'); document.querySelector('#test').onclick = functi on(e){
+      for (var i = 0; i
+        < lis.length; i++) { var li = l is[i]; if (li == e.target) { alert(i); } }
+    };
+
+   //闭包实现
+    // var lis = document.querySelectorAll('li');
+    // for (var i = 0; i < lis.length; i++) {
+    //   var li = l is[i]; li.onclick = (function (index) { return function (e) { alert(index); }; })(i);
+    // }
+
+
+    //、用正则表达式，写出由字母开头，其余由数字、字母、下划线组成的 6~30 的字符串？
+   // varreg=/^[a-ZA-Z][\da-zA-Z_]{5,29}/;
+
+
+    //写一个函数可以计算 sum(5,0,-5);输出 0; sum(1,2,3,4);输出 10;
+    // function calc() {
+    //   var result = 0;
+    //   for (var i = 0; i < arguments.length; i++) {
+    //     var obj = arguments[i]; result += obj;
+    //   }
+    //   return result;
+    // }
+    // alert(calc(1, 2, 3, 4));
+
+
+    //《正则》写出正确的正则表达式匹配固话号，区号 3-4 位，第一位为 0，中横线，7-8 位数字，中横线，3-4 位分机号格式的固话号
+    //0[0-9]{2,3}-\d{7,8}/
+
+    
+   
+
+
+
+  </script>
+</body>
+</html>
+
+

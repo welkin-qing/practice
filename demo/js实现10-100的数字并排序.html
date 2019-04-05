@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var iArray = []
+    function getRandom(istart, iend){
+      var iChoice = istart - iend + 1;
+      return Math.floor(Math.random() * iChoice + istart)
+    }
+    Math.random()//就是获取 0 - 1 之间的随机数（永远获取不到 1）
+    for (var i = 0; i < 10; i++) {
+      var result = getRandom(10, 100);
+      iArray.push(result);
+    }
+    console.log(iArray.sort())
+  </script>
+</body>
+</html>

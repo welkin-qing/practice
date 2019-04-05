@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+</head>
+<body>
+<input class="1" type="checkbox">
+<input class="2" type="text">
+<input class="3" type="checkbox">
+<input class="4" type="textarea">
+<input class="5" type="checkbox">
+<input class="6" type="button">
+<script>
+var domList = document.getElementsByTagName('input')
+var checkBoxList = [];
+var len = domList.length; //缓存到局部变量
+while (len--) { //使用 while 的效率会比 for 循环
+更高
+if (domList[len].type == 'checkbox') {
+checkBoxList.push(domList[len]);
+}
+}
+console.log(checkBoxList)
+</script>
+</body>
+</html>

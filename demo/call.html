@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //JS 中的简单继承 call 方法！
+      //顶一个父母类，注意：类名都是首字母大写的哦！
+      function Parent(name, money) {
+        this.name = name;
+        this.money = money;
+        this.info = function () {
+          alert('姓名： ' + this.name + ' 钱： ' + this.money);
+        }
+      }
+      //定义孩子类
+      function Children(name) {
+        Parent.call(this, name); //继承 姓名属性，不要钱。
+        this.info = function () {
+          alert('姓名： ' + this.name);
+        }
+      }
+      //实例化类
+      var per = new Parent('parent', 800000000000);
+      var chi = new Children('child');
+      per.info();
+      chi.info();
+  </script>
+</body>
+</html>

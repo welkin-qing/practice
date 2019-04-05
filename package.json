@@ -1,0 +1,23 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "1. 请仅仅使用用html标签编写个人简历网页，简历中不包含任何CSS和JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/welkin-qing/practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/welkin-qing/practice/issues"
+  },
+  "homepage": "https://github.com/welkin-qing/practice#readme",
+  "dependencies": {
+    "readline": "^1.3.0"
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function outer() {
+            var num = 1;
+            function inner () {
+                var n = 2;
+                alert(n + num)  
+            }
+            return inner;
+        }
+        outer()();//3
+
+        // function out() {
+        //     var num = 1;
+        //    return function  (n){
+        //         return (n + num)
+        //     }
+        // }
+        // var a = out()
+        // console.log(a(1)) //2
+        // console.log(out()(2))  //3
+    </script>
+</body>
+</html>

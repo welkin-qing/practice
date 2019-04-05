@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function combo(msg) {
+      var arr = msg.split("-");
+      var len = arr.length; //将 arr.length 存储在一个局部变量可以提高 for 循环效率
+      for (var i = 1; i < len; i++) {
+         arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].substr(1, arr[i].length - 1);
+      }
+       msg = arr.join("");
+      return msg;
+    }
+    combo("welkin-qing")
+    console.log("a")
+  </script>
+</body>
+</html>
