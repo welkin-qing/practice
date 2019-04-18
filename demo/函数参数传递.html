@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var a = 1;
+    //b 为参数默认值（ES6规定使用默认参数即为严格模式，不能修改arguments）
+    function fn2(a, b = function () { console.log('参数变量', a); }) {
+      console.log(arguments)
+      console.log(arguments[0],arguments[1])
+      arguments[0] = 3;
+      console.log('变量1', a, arguments[0]);
+      var a = 2;
+      console.log('变量2', a, arguments[0]);
+      b();
+    }
+    fn2(a);
+    console.log('变量3', a);
+
+  </script>
+</body>
+</html>
