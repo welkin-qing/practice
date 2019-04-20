@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  var a=[1,2,3];
+  var b = a.join();
+  b = b.split();
+  b.push(4);
+  console.log(a);
+  console.log(b);
+  function c (arr,n){
+    return arr.concat(n)
+  }
+  console.log(c(a,4));
+  console.log(a);
+  //改变原数组：pop push shift unshift sort splice
+  //不改变原数组： join slice concat 
+  </script>
+</body>
+</html>
